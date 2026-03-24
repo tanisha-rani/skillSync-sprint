@@ -1,0 +1,19 @@
+server:
+  port: 8080   # Gateway is entry point
+
+spring:
+  application:
+    name: apigateway   # service name in Eureka
+
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
