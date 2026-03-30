@@ -178,4 +178,13 @@ public class MentorServiceImpl implements MentorService {
         Mentor updatedMentor = mentorRepository.save(mentor);
         return modelMapper.map(updatedMentor, MentorResponseDto.class);
     }
+
+    @Override
+    public void updateRating(Long mentorId, Double averageRating, Integer totalReviews) {
+        Mentor mentor = mentorRepository.findById(mentorId)
+                .orElseThrow(() -> new MentorNotFoundException(mentorId));
+        mentor.setAverageRating(averageRating);
+        mentor.setTotalReviews(totalReviews);
+        mentorRepository.save(mentor);
+    }
 }

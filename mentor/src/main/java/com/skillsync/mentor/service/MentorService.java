@@ -29,4 +29,6 @@ public interface MentorService {
     Page<MentorResponseDto> getMentorsBySkill(String skill, int page, int size, String sortBy);
     Page<MentorResponseDto> getAvailableMentors(int page, int size, String sortBy);
     MentorResponseDto toggleAvailability(Long id);
+
+    void updateRating(Long mentorId, Double averageRating, Integer totalReviews);
 }

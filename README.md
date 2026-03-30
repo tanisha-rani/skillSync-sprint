@@ -41,11 +41,17 @@ The system follows **Microservices Architecture** with service discovery and cen
 ## 📂 Project Structure
 
 SkillSync
+
 ├── apigateway
+
 ├── discovery-server
+
 ├── mentor
+
 ├── skillService
-├── sessionService *(in progress)*
+
+├── sessionService 
+
 ├── userservice
 
 ---

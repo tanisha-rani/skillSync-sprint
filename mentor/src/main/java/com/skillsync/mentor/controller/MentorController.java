@@ -107,5 +107,13 @@ public class MentorController {
         return ResponseEntity.ok(mentorService.toggleAvailability(id));
     }
 
-
+    // Add to MentorController.java in mentor service
+    @PutMapping("/{id}/rating")
+    public ResponseEntity<Void> updateRating(
+            @PathVariable Long id,
+            @RequestParam Double averageRating,
+            @RequestParam Integer totalReviews) {
+        mentorService.updateRating(id, averageRating, totalReviews);
+        return ResponseEntity.ok().build();
+    }
 }

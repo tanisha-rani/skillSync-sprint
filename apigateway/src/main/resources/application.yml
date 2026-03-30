@@ -1,19 +1,172 @@
 server:
-  port: 8080   # Gateway is entry point
+  port: 8080
 
 spring:
   application:
-    name: apigateway   # service name in Eureka
+    name: API-GATEWAY
 
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       routes:
+
+        - id: auth-service-docs
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: user-service-docs
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: mentor-service-docs
+          uri: lb://MENTOR-SERVICE
+          predicates:
+            - Path=/mentors/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: skill-service-docs
+          uri: lb://SKILL-SERVICE
+          predicates:
+            - Path=/skills/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: group-service-docs
+          uri: lb://GROUP-SERVICE
+          predicates:
+            - Path=/groups/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: session-service-docs
+          uri: lb://SESSION-SERVICE
+          predicates:
+            - Path=/sessions/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: review-service-docs
+          uri: lb://REVIEW-SERVICE
+          predicates:
+            - Path=/reviews/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: notification-service-docs
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notifications/v3/api-docs/**
+          filters:
+            - StripPrefix=1
+
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: mentor-service
+          uri: lb://MENTOR-SERVICE
+          predicates:
+            - Path=/mentors/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: skill-service
+          uri: lb://SKILL-SERVICE
+          predicates:
+            - Path=/skills/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: group-service
+          uri: lb://GROUP-SERVICE
+          predicates:
+            - Path=/groups/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: session-service
+          uri: lb://SESSION-SERVICE
+          predicates:
+            - Path=/sessions/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: review-service
+          uri: lb://REVIEW-SERVICE
+          predicates:
+            - Path=/reviews/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notifications/**
+          filters:
+            - JwtAuthenticationFilter
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+jwt:
+  secret: mysecretkeymysecretleymysecretkey32
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: Auth Service
+        url: /auth/v3/api-docs
+      - name: User Service
+        url: /users/v3/api-docs
+      - name: Mentor Service
+        url: /mentors/v3/api-docs
+      - name: Skill Service
+        url: /skills/v3/api-docs
+      - name: Group Service
+        url: /groups/v3/api-docs
+      - name: Session Service
+        url: /sessions/v3/api-docs
+      - name: Review Service
+        url: /reviews/v3/api-docs
+      - name: Notification Service
+        url: /notifications/v3/api-docs
+
+logging:
+  level:
+    org.springframework.cloud.sleuth: DEBUG
+    io.micrometer.tracing: DEBUG

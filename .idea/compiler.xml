@@ -8,27 +8,43 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apigateway" />
+        <module name="notificationservice" />
         <module name="discovery-server" />
+      </profile>
+      <profile name="Annotation profile for sessionservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="sessionService" />
       </profile>
       <profile name="Annotation profile for userservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="skillService" />
-        <module name="sessionService" />
         <module name="mentor" />
+        <module name="auth-service" />
+        <module name="review-service" />
         <module name="userservice" />
+        <module name="group" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="apigateway" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
+      <module name="group" options="-parameters" />
       <module name="mentor" options="-parameters" />
+      <module name="notificationservice" options="-parameters" />
+      <module name="review-service" options="-parameters" />
       <module name="sessionService" options="-parameters" />
       <module name="skillService" options="-parameters" />
       <module name="userservice" options="-parameters" />
