@@ -1,167 +1,220 @@
-# 🚀 SkillSync – Backend (Microservices Architecture)
+# 🚀 SkillSync – Microservices-Based Mentorship Platform
 
 ## 📌 Overview
 
-SkillSync is a **backend system for a Peer Learning & Mentor Matching Platform**, built using **Spring Boot Microservices Architecture**.
+SkillSync is a **Spring Boot Microservices-based platform** designed to connect learners with mentors.
+It enables session booking, skill sharing, notifications, reviews, and authentication with secure access control.
 
-The platform connects learners with mentors, enables session booking, skill management, and supports scalable service communication.
+The project follows **modern backend architecture** using:
 
-This repository contains the **backend implementation only**.
+* Microservices
+* API Gateway
+* Service Discovery (Eureka)
+* Event-driven communication (RabbitMQ)
+* Centralized Swagger documentation
+* JWT Authentication & Authorization
 
 ---
 
 ## 🏗️ Architecture
 
-The system follows **Microservices Architecture** with service discovery and centralized routing.
+### 🔹 Tech Stack
 
-### 🔹 Core Components
-
-* **API Gateway** – Central entry point for all client requests
-* **Discovery Server (Eureka)** – Service registry for dynamic service discovery
-* **Independent Microservices**:
-
-    * Mentor Service
-    * Skill Service
-    * User Service
-    * Session Service *(in progress)*
-
----
-
-## ⚙️ Tech Stack
-
-* Java, Spring Boot
-* Spring Cloud (Eureka, API Gateway)
-* REST APIs
-* Maven
-* MySQL / Relational Database
-* Git & GitHub
+* **Backend:** Spring Boot, Spring Cloud
+* **Database:** MySQL
+* **Security:** JWT (Role-Based Access)
+* **Messaging:** RabbitMQ
+* **Service Discovery:** Eureka Server
+* **API Gateway:** Spring Cloud Gateway
+* **Documentation:** Swagger (SpringDoc OpenAPI)
+* **Tracing (Optional):** Zipkin
+* **Containerization:** Docker
 
 ---
 
-## 📂 Project Structure
+## 🔧 Microservices
 
-SkillSync
-
-├── apigateway
-
-├── discovery-server
-
-├── mentor
-
-├── skillService
-
-├── sessionService 
-
-├── userservice
-
----
-
-## 🔀 Git Branch Strategy
-
-Each microservice is maintained in a separate branch:
-
-* `mentor-service`
-* `skill-service`
-* `userservice`
-* `api-gateway`
-* `discovery-server`
-* `session-service` *(under development)*
+| Service              | Description                                 |
+| -------------------- | ------------------------------------------- |
+| AUTH-SERVICE         | Handles login, registration, JWT generation |
+| USER-SERVICE         | Manages user data                           |
+| MENTOR-SERVICE       | Handles mentor profiles                     |
+| SKILL-SERVICE        | Manages skills                              |
+| SESSION-SERVICE      | Booking & managing sessions                 |
+| REVIEW-SERVICE       | Feedback & ratings                          |
+| GROUP-SERVICE        | Community/group features                    |
+| NOTIFICATION-SERVICE | Sends notifications via RabbitMQ + Email    |
+| API-GATEWAY          | Single entry point for all services         |
+| EUREKA-SERVER        | Service discovery                           |
 
 ---
 
-## 🚀 Features Implemented
+## 🔄 System Flow
 
-### 🔐 Authentication & Authorization (Planned)
+1. User registers/logs in via **Auth Service**
+2. JWT Token is generated
+3. All requests go through **API Gateway**
+4. Gateway validates JWT & forwards request
+5. Services communicate:
 
-* JWT-based authentication (future scope)
-* Role-based access (Learner, Mentor, Admin)
-
-### 👤 User Service
-
-* User profile management
-* CRUD operations for users
-
-### 👨‍🏫 Mentor Service
-
-* Mentor profile creation
-* Experience & skill management
-* Mentor-related business logic
-
-### 🧠 Skill Service
-
-* Skill creation & management
-* Skill tagging for mentors
-
-### 📡 API Gateway
-
-* Centralized routing
-* Request forwarding to microservices
-
-### 🧭 Discovery Server
-
-* Service registration using Eureka
-* Dynamic service lookup
-
-### 📅 Session Service *(In Progress)*
-
-* Session booking & scheduling
-* Accept/reject workflow
+  * REST (Feign / HTTP)
+  * Async via RabbitMQ (notifications)
+6. Data stored in MySQL
+7. Notifications sent via Email service
 
 ---
 
-## 🔄 Microservices Communication
+## 🔐 Authentication & Authorization
 
-* Services communicate using **REST APIs**
-* Future scope: **Event-driven architecture using RabbitMQ**
-
----
-
-## 🧪 API Testing
-
-Test endpoints using:
-
-* Postman
-* Swagger *(can be integrated)*
-
----
-
-## ⚡ Key Highlights
-
-* Microservices-based scalable backend
-* Layered architecture (Controller → Service → Repository)
-* DTO-based request/response handling
-* Global exception handling implemented
-* Modular and maintainable code structure
-
----
-
-## 🔐 Security (Planned)
-
-* Spring Security integration
 * JWT-based authentication
-* Role-based authorization
+* Role-based access:
+
+  * 👤 USER
+  * 🧑‍🏫 MENTOR
+  * 🛠️ ADMIN
 
 ---
 
-## 🚀 Future Enhancements
+## 📡 API Gateway
 
-* JWT Authentication & Security
-* RabbitMQ for event-driven communication
-* Docker containerization
-* CI/CD pipeline (GitHub Actions)
-* Cloud deployment (AWS)
-* Notification & Review Services
+* Central routing of all requests
+* JWT validation filter
+* Swagger aggregation for all services
+
+---
+
+## 📄 Swagger UI (Centralized)
+
+Access all APIs from one place:
+
+👉 http://localhost:8080/swagger-ui.html
+
+---
+
+## 🐇 RabbitMQ Flow (Notification System)
+
+1. Service sends message → Queue
+2. Notification Service consumes message
+3. Email is sent to user
+4. Status saved in DB
+
+---
+
+## 📬 Email Configuration
+
+Uses SMTP (Mailtrap / Gmail App Password)
+
+---
+
+## 🧪 Testing
+
+* Postman for API testing
+* Swagger UI for interactive testing
+* JUnit + Mockito for unit testing
+
+---
+
+## 🛠️ How to Run
+
+### 🔹 Step 1: Start Required Services
+
+* MySQL
+* RabbitMQ
+* Eureka Server
+
+---
+
+### 🔹 Step 2: Run Microservices (Order)
+
+1. Eureka Server
+2. Auth Service
+3. All other services
+4. API Gateway
+
+---
+
+### 🔹 Step 3: Access Application
+
+* Gateway: http://localhost:8080
+* Eureka: http://localhost:8761
+* Swagger: http://localhost:8080/swagger-ui.html
+
+---
+
+## 🐳 Docker Setup (Optional)
+
+```bash
+docker build -t apigateway .
+docker run -p 8080:8080 apigateway
+```
+
+---
+
+## 🔍 Distributed Tracing (Zipkin)
+
+```bash
+docker run -d -p 9411:9411 openzipkin/zipkin
+```
+
+Access:
+👉 http://localhost:9411
+
+---
+
+## ⚠️ Common Issues & Fixes
+
+### ❌ 401 / 403 Errors
+
+* Missing JWT token
+* Invalid token format
+
+### ❌ Eureka Not Connecting
+
+* Use system IP instead of localhost in Docker
+
+### ❌ Swagger Not Loading
+
+* Allow `/v3/api-docs` in gateway filter
+
+---
+
+## 📊 Features Implemented
+
+✔ Microservices Architecture
+✔ API Gateway Routing
+✔ JWT Authentication
+✔ Role-Based Authorization
+✔ RabbitMQ Messaging
+✔ Email Notifications
+✔ Swagger Documentation
+✔ Centralized Logging & Tracing
+✔ Docker Support
+
+---
+
+## 📈 Future Enhancements
+
+* Frontend (React / Angular)
+* Kubernetes Deployment
+* CI/CD Pipeline
+* Rate Limiting
+* Circuit Breaker (Resilience4j)
 
 ---
 
 ## 👩‍💻 Author
 
-Tanisha Rani
-GitHub: https://github.com/tanisha-rani
+**Tanisha Rani**
 
 ---
 
-## 📌 Note
+## 📚 References
+* Spring Boot Documentation
+* Spring Cloud Documentation
+* RabbitMQ Documentation
+* JWT Authentication Best Practices
+* Swagger (SpringDoc OpenAPI) Documentation
+* Docker Documentation
+  * Zipkin Documentation    
 
-This repository contains only the **backend implementation** of SkillSync.
-Frontend (Angular) and advanced services are part of extended system design.
+
