@@ -39,7 +39,7 @@ public class MentorServiceImpl implements MentorService {
             throw new MentorAlreadyExistsException(requestDto.getUserId());
         }
         Mentor mentor = modelMapper.map(requestDto, Mentor.class);
-        mentor.setUserId(null);
+        mentor.setUserId(requestDto.getUserId());
         mentor.setStatus(MentorStatus.PENDING);
         mentor.setAverageRating(0.0);
         mentor.setTotalReviews(0);

@@ -3,6 +3,7 @@ package com.skillsync.userservice.controller;
 import com.skillsync.userservice.dto.UserRequestDto;
 import com.skillsync.userservice.dto.UserResponseDto;
 import com.skillsync.userservice.entity.Role;
+import com.skillsync.userservice.repository.UserRepository;
 import com.skillsync.userservice.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -13,13 +14,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @Tag(name = "User Service", description = "APIs for managing users")
 public class UserController {
-
+    private final UserRepository userRepository;
     private final UserService userService;
 
     //Create a new User
@@ -92,6 +95,12 @@ public class UserController {
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "id") String sortBy) {
         return ResponseEntity.ok(userService.getActiveUsers(page, size, sortBy));
+    }
+
+    @GetMapping("/admin/stats")
+    public Map<String, Long> getStats() {
+        long totalUsers = userRepository.count();
+        return Map.of("totalUsers", totalUsers);
     }
 
 }

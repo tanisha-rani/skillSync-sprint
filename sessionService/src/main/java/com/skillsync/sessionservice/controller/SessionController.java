@@ -3,6 +3,7 @@ package com.skillsync.sessionservice.controller;
 import com.skillsync.sessionservice.dto.SessionRequestDto;
 import com.skillsync.sessionservice.dto.SessionResponseDto;
 import com.skillsync.sessionservice.entity.SessionStatus;
+import com.skillsync.sessionservice.repository.SessionRepository;
 import com.skillsync.sessionservice.service.SessionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -14,13 +15,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sessions")
 @RequiredArgsConstructor
 @Tag(name = "Session Controller", description = "Manage mentoring sessions")
 public class SessionController {
-
+    private final SessionRepository sessionRepository;
     private final SessionService sessionService;
 
     //-----Core Operations-----------------------------------------
@@ -96,5 +98,11 @@ public class SessionController {
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "createdAt") String sortBy) {
         return ResponseEntity.ok(sessionService.getSessionsByStatus(status, page, size, sortBy));
+    }
+
+    @GetMapping("/admin/stats")
+    public Map<String, Long> getStats() {
+        long totalSessions = sessionRepository.count();
+        return Map.of("totalSessions", totalSessions);
     }
 }

@@ -38,7 +38,13 @@ public class SessionServiceImpl implements SessionService {
         // Validate mentor exists and is available before booking
         MentorDto mentor = mentorFeignClient.getMentorById(requestDto.getMentorId());
         if (!mentor.isAvailable()) {
-            throw new IllegalStateException("Mentor is not currently available");
+            String message = "Mentor " + requestDto.getMentorId() + " is not currently available";
+            if (mentor.getStatus() != null && !"APPROVED".equalsIgnoreCase(mentor.getStatus())) {
+                message = "Mentor " + requestDto.getMentorId()
+                        + " cannot be booked because they are not approved yet (status: "
+                        + mentor.getStatus() + ")";
+            }
+            throw new IllegalStateException(message);
         }
 
         Session session = modelMapper.map(requestDto, Session.class);

@@ -16,10 +16,12 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
 jwt:
   secret: mysecretkeymysecretleymysecretkey32
   expiration: 86400000
   refresh-expiration: 604800000
+
 springdoc:
   api-docs:
     path: /v3/api-docs

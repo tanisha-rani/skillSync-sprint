@@ -82,6 +82,9 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
                         !(role.equals("ROLE_MENTOR") || role.equals("ROLE_ADMIN"))) {
                     return onError(exchange, "Access Denied - Mentor Only", HttpStatus.FORBIDDEN);
                 }
+                if (path.startsWith("/admin") && !"ROLE_ADMIN".equals(role)) {
+                    return onError(exchange, "Access Denied", HttpStatus.FORBIDDEN);
+                }
 
                 if (path.contains("/sessions") &&
                         !(role.equals("ROLE_USER") ||

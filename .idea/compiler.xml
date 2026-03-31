@@ -8,8 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apigateway" />
-        <module name="notificationservice" />
+        <module name="config-server" />
         <module name="discovery-server" />
+        <module name="configserver" />
+        <module name="notificationservice" />
       </profile>
       <profile name="Annotation profile for sessionservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -40,6 +42,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="apigateway" options="-parameters" />
       <module name="auth-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="configserver" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="group" options="-parameters" />
       <module name="mentor" options="-parameters" />

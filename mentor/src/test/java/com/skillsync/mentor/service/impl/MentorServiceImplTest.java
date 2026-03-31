@@ -54,5 +54,6 @@ class MentorServiceImplTest {
         org.mockito.Mockito.verify(mentorRepository).save(captor.capture());
         assertEquals(MentorStatus.PENDING, captor.getValue().getStatus());
         assertEquals(false, captor.getValue().isAvailable());
+        assertEquals(10L, captor.getValue().getUserId());
     }
 }

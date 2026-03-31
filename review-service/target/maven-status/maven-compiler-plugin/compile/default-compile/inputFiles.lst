@@ -8,6 +8,7 @@ C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsyn
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\client\SessionFeignClient.java
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\client\SessionFeignClientFallback.java
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\config\AppConfig.java
+C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\config\FeignConfig.java
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\config\SecurityConfig.java
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\controller\ReviewController.java
 C:\Users\HP\OneDrive\Desktop\SkillSync\review-service\src\main\java\com\skillsync\reviewservice\dto\MentorRatingSummaryDto.java

@@ -3,6 +3,7 @@ package com.skillsync.mentor.controller;
 import com.skillsync.mentor.dto.MentorRequestDto;
 import com.skillsync.mentor.dto.MentorResponseDto;
 import com.skillsync.mentor.entity.MentorStatus;
+import com.skillsync.mentor.repository.MentorRepository;
 import com.skillsync.mentor.service.MentorService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -12,13 +13,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("/mentors")
 @RequiredArgsConstructor
 public class MentorController {
-
+    private final MentorRepository mentorRepository;
      private final MentorService mentorService;
 
      /*
@@ -115,5 +118,11 @@ public class MentorController {
             @RequestParam Integer totalReviews) {
         mentorService.updateRating(id, averageRating, totalReviews);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/admin/stats")
+    public Map<String, Long> getStats() {
+        long totalMentors = mentorRepository.count();
+        return Map.of("totalMentors", totalMentors);
     }
 }
