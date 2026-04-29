@@ -1,9 +1,11 @@
 package com.skillsync.notificationservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.skillsync.notificationservice.config.RabbitMQConfig;
 import com.skillsync.notificationservice.dto.NotificationRequestDto;
 import com.skillsync.notificationservice.entity.NotificationType;
 import com.skillsync.notificationservice.entity.ReferenceType;
+import com.skillsync.notificationservice.service.JwtService;
 import com.skillsync.notificationservice.service.NotificationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -39,6 +41,9 @@ class NotificationControllerTest {
     @MockBean
     private NotificationService notificationService;
 
+    @MockBean
+    private JwtService jwtService;
+
     @Test
     void sendNotification_sendsToQueue() throws Exception {
         NotificationRequestDto request = NotificationRequestDto.builder()
@@ -54,7 +59,11 @@ class NotificationControllerTest {
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk());
 
-        verify(rabbitTemplate).convertAndSend(eq("notificationQueue"), any(NotificationRequestDto.class));
+        verify(rabbitTemplate).convertAndSend(
+                eq(RabbitMQConfig.EXCHANGE),
+                eq(RabbitMQConfig.ROUTING_KEY),
+                any(NotificationRequestDto.class)
+        );
     }
 
     @Test

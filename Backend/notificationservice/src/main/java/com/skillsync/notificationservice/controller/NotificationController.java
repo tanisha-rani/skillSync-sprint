@@ -5,10 +5,9 @@ import com.skillsync.notificationservice.dto.NotificationRequestDto;
 import com.skillsync.notificationservice.dto.NotificationResponseDto;
 import com.skillsync.notificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 import java.util.List;
 import java.util.Map;
@@ -26,7 +25,11 @@ public class NotificationController {
     public ResponseEntity<String> sendNotification(
             @RequestBody NotificationRequestDto requestDto) {
 
-        rabbitTemplate.convertAndSend("notificationQueue", requestDto);
+        rabbitTemplate.convertAndSend(
+                RabbitMQConfig.EXCHANGE,
+                RabbitMQConfig.ROUTING_KEY,
+                requestDto
+        );
 
         return ResponseEntity.ok("Message sent to queue");
     }
