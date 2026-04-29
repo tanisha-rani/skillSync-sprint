@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1766066a-96b5-40d7-a9ec-63524ef85638" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SkillSync.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SkillSync.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/ApiGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/clients/MentorClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/clients/SessionClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/clients/UserClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/controller/DashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/skillsync/apigateway/filter/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/test/java/com/skillsync/apigateway/ApigatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/AuthServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/config/SecurityBeansConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/controller/RoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/controller/TokenValidationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/dto/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/dto/UserRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/entity/RefreshToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/exception/EmailAlreadyExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/exception/InvalidCredentialException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/repository/RefreshTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/service/RefreshTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/service/impl/RefreshTokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/skillsync/authservice/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/AuthServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/controller/RoleControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/controller/TestControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/controller/TokenValidationControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/service/impl/RefreshTokenServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/skillsync/authservice/service/impl/UserServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/API-GATEWAY.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/AUTH-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/DISCOVERY-SERVER.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/GROUP-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/MENTOR-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/NOTIFICATION-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/REVIEW-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/SESSION-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/SKILL-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/USER-SERVICE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/skillsync/configserver/ConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/com/skillsync/configserver/ConfigServerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/java/com/skillsync/configserver/ConfigserverApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/test/java/com/skillsync/configserver/ConfigserverApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/SkillSync/discovery_server/DiscoveryServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/test/java/com/SkillSync/discovery_server/DiscoveryServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/GroupApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/client/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/client/UserFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/client/UserFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/controller/GroupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/dto/DiscussionRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/dto/DiscussionResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/dto/GroupRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/dto/GroupResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/entity/Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/entity/GroupDiscussion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/entity/GroupStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/GroupFullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/GroupNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/GroupNotOpenException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/UnauthorizedActionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/UserAlreadyMemberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/exception/UserNotMemberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/repository/GroupDiscussionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/repository/GroupRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/service/GroupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/java/com/skillsync/group/service/impl/GroupServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/test/java/com/skillsync/group/GroupApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/test/java/com/skillsync/group/controller/GroupControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupservice/src/test/java/com/skillsync/group/service/impl/GroupServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/MentorApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/client/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/client/UserFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/client/UserFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/controller/MentorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/dto/MentorRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/dto/MentorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/entity/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/entity/MentorStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/exception/MentorAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/exception/MentorNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/repository/MentorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/service/MentorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/java/com/skillsync/mentor/service/impl/MentorServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/test/java/com/skillsync/mentor/MentorApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/test/java/com/skillsync/mentor/controller/MentorControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mentor/src/test/java/com/skillsync/mentor/service/impl/MentorServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/NotificationserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/client/SessionDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/client/SessionFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/client/SessionFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/config/RabbitMQConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/consumer/NotificationConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/controller/NotificationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/dto/NotificationRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/dto/NotificationResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/entity/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/entity/NotificationStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/entity/NotificationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/entity/ReferenceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/exception/NotificationNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/repository/NotificationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/service/NotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/skillsync/notificationservice/service/NotificationTemplateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/test/java/com/skillsync/notificationservice/NotificationserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/test/java/com/skillsync/notificationservice/controller/NotificationControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/test/java/com/skillsync/notificationservice/service/NotificationServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillSync/com/skillsync/apigateway/ApigatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillSync/com/skillsync/apigateway/filter/JwtAuthenticationFilter$Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillSync/com/skillsync/apigateway/filter/JwtAuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/ReviewServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/MentorDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/MentorFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/MentorFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/NotificationFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/NotificationFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/NotificationRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/SessionDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/SessionFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/client/SessionFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/controller/ReviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/dto/MentorRatingSummaryDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/dto/ReviewRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/dto/ReviewResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/entity/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/exception/ReviewAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/exception/ReviewNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/repository/ReviewRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/service/ReviewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/skillsync/reviewservice/service/impl/ReviewServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/test/java/com/skillsync/reviewservice/controller/ReviewControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/test/java/com/skillsync/reviewservice/service/impl/ReviewServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/ReviewServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/MentorDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/MentorFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/MentorFeignClientFallback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/NotificationFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/NotificationFeignClientFallback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/NotificationRequestDto$NotificationRequestDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/NotificationRequestDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/SessionDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/SessionFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/client/SessionFeignClientFallback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/config/FeignConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/controller/ReviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/dto/MentorRatingSummaryDto$MentorRatingSummaryDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/dto/MentorRatingSummaryDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/dto/ReviewRequestDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/dto/ReviewResponseDto$ReviewResponseDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/dto/ReviewResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/entity/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/exception/ErrorResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/exception/ReviewAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/exception/ReviewNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/repository/ReviewRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/security/JwtFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/service/JwtService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/service/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/service/UserContextService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/classes/com/skillsync/reviewservice/service/impl/ReviewServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/review-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/review-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/sonar/.sonar_lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/sonar/report-task.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/test-classes/com/skillsync/reviewservice/controller/ReviewControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/target/test-classes/com/skillsync/reviewservice/service/impl/ReviewServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/SessionServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/MentorDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/MentorFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/MentorFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/NotificationFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/NotificationFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/NotificationRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/UserFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/client/UserFeignClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/controller/SessionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/dto/SessionRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/dto/SessionResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/entity/Session.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/entity/SessionStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/exception/SessionNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/repository/SessionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/service/SessionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/java/com/skillsync/sessionservice/service/impl/SessionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/test/java/com/skillsync/sessionService/SessionServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/test/java/com/skillsync/sessionService/controller/SessionControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessionService/src/test/java/com/skillsync/sessionService/service/impl/SessionServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/SkillServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/controller/SkillController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/dto/SkillRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/dto/SkillResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/entity/Skills.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/exception/SkillAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/exception/SkillNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/repository/SkillRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/service/SkillService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/java/com/skillsync/skillService/service/impl/SkillServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/test/java/com/skillsync/skillService/SkillServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/test/java/com/skillsync/skillService/controller/SkillControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillService/src/test/java/com/skillsync/skillService/service/impl/SkillServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/UserserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/dto/UserRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/dto/UserResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/exception/UserAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/exception/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/service/UserContextService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/skillsync/userservice/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/test/java/com/skillsync/userservice/UserserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/test/java/com/skillsync/userservice/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/test/java/com/skillsync/userservice/service/impl/UserServiceImplTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/HP/OneDrive/Desktop/SkillSync" value="3CrJd91naKWxihjcqv71ou0Vem7" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="5203" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tanisha-rani&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tanisha-rani/skillSync-sprint.git&quot;,
+    &quot;accountId&quot;: &quot;86b4023f-432c-4ac8-82f6-78f960c01333&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3CrJd91naKWxihjcqv71ou0Vem7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ApigatewayApplication.executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.ConfigserverApplication.executor": "Run",
+    "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.GroupApplication.executor": "Run",
+    "Spring Boot.MentorApplication.executor": "Run",
+    "Spring Boot.NotificationserviceApplication.executor": "Run",
+    "Spring Boot.ReviewServiceApplication.executor": "Run",
+    "Spring Boot.SessionserviceApplication.executor": "Run",
+    "Spring Boot.SkillServiceApplication.executor": "Run",
+    "Spring Boot.UserserviceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.NotificationserviceApplication">
+    <configuration name="All Services" type="CompoundRunConfigurationType">
+      <toRun name="ApigatewayApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="GroupApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MentorApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="NotificationserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ReviewServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="SessionserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="SkillServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="UserserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ApigatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="apigateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.apigateway.ApigatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.authservice.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.configserver.ConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="apigateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.configserver.ConfigserverApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.SkillSync.discovery_server.DiscoveryServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.SkillSync.discovery_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="group" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.group.GroupApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.group.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MentorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="mentor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.mentor.MentorApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.mentor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.notificationservice.NotificationserviceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.notificationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="review-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.reviewservice.ReviewServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.reviewservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SessionserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="sessionservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.sessionservice.SessionserviceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.sessionservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="skillService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.skillService.SkillServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.skillService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="userservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skillsync.userservice.UserserviceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.userservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Compound.All Services" />
+      <item itemvalue="Spring Boot.ApigatewayApplication" />
+      <item itemvalue="Spring Boot.ConfigserverApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.GroupApplication" />
+      <item itemvalue="Spring Boot.MentorApplication" />
+      <item itemvalue="Spring Boot.NotificationserviceApplication" />
+      <item itemvalue="Spring Boot.ReviewServiceApplication" />
+      <item itemvalue="Spring Boot.SessionserviceApplication" />
+      <item itemvalue="Spring Boot.SkillServiceApplication" />
+      <item itemvalue="Spring Boot.UserserviceApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1766066a-96b5-40d7-a9ec-63524ef85638" name="Changes" comment="" />
+      <created>1777137841401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777137841401</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
