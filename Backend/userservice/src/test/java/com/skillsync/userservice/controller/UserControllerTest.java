@@ -34,7 +34,7 @@ class UserControllerTest {
 
     @Test
     void createUser_returnsCreated() throws Exception {
-        UserRequestDto request = new UserRequestDto("Test User", "user@example.com", Role.ROLE_LEARNER);
+        UserRequestDto request = new UserRequestDto("Test User", "user@example.com", Role.LEARNER);
         UserResponseDto response = new UserResponseDto();
         response.setId(1L);
 
