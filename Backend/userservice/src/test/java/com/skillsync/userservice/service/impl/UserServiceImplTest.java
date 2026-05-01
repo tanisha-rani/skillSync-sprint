@@ -33,7 +33,7 @@ class UserServiceImplTest {
 
     @Test
     void createUser_whenExists_throwsException() {
-        UserRequestDto request = new UserRequestDto("Test User", "user@example.com", Role.ROLE_LEARNER);
+        UserRequestDto request = new UserRequestDto("Test User", "user@example.com", Role.LEARNER);
         when(userRepository.existsByEmail("user@example.com")).thenReturn(true);
 
         assertThrows(UserAlreadyExistsException.class, () -> userService.createUser(request));
