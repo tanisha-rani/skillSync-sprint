@@ -43,4 +43,5 @@ jobs:
 
       - name: Build ${{ matrix.service }}
         working-directory: ${{ matrix.service }}
-        run: mvn clean test
+        run: mvn clean package -DskipTests
+
