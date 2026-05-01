@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1766066a-96b5-40d7-a9ec-63524ef85638" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/skillsync/apigateway/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/skillsync/apigateway/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config-repo/NOTIFICATION-SERVICE.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config-repo/NOTIFICATION-SERVICE.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/config/RabbitMQConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/service/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/controller/NotificationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/controller/NotificationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/dto/SessionResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/dto/SessionResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/service/impl/SessionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/features/platform/platformApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/platform/platformApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/layout/Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/layout/Topbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/BookingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/BookingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/DashboardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/SignupPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/SignupPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/utils/viewMappers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/utils/viewMappers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +37,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="5203" />
+    <option name="cachedIndexableFilesCount" value="5512" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,29 +74,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ApigatewayApplication.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.ConfigServerApplication.executor": "Run",
-    "Spring Boot.ConfigserverApplication.executor": "Run",
-    "Spring Boot.DiscoveryServerApplication.executor": "Run",
-    "Spring Boot.GroupApplication.executor": "Run",
-    "Spring Boot.MentorApplication.executor": "Run",
-    "Spring Boot.NotificationserviceApplication.executor": "Run",
-    "Spring Boot.ReviewServiceApplication.executor": "Run",
-    "Spring Boot.SessionserviceApplication.executor": "Run",
-    "Spring Boot.SkillServiceApplication.executor": "Run",
-    "Spring Boot.UserserviceApplication.executor": "Run",
-    "git-widget-placeholder": "#3 on dev",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApigatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GroupApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MentorApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SessionserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SkillServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;original/dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Compound.All Services">
     <configuration name="All Services" type="CompoundRunConfigurationType">
       <toRun name="ApigatewayApplication" type="SpringBootApplicationConfigurationType" />

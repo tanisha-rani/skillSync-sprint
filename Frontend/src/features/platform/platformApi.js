@@ -222,6 +222,7 @@ export const {
   useUpdateMentorMutation,
   useGetUsersQuery,
   useGetUserByIdQuery,
+  useLazyGetUserByIdQuery,
   useGetSessionsByUserQuery,
   useGetSessionsByMentorQuery,
   useGetSessionsQuery,

@@ -273,6 +273,7 @@ public class SessionServiceImpl implements SessionService {
         SessionResponseDto responseDto = modelMapper.map(session, SessionResponseDto.class);
         UserDto learnerUser = safeGetUserById(session.getLearnerId(), "Learner");
         responseDto.setLearnerName(learnerUser.getName());
+        responseDto.setLearnerEmail(learnerUser.getEmail());
 
         try {
             MentorDto mentor = mentorFeignClient.getMentorById(session.getMentorId());

@@ -105,11 +105,15 @@ export function mapGroupToCard(group, userMap, currentUserId) {
 
 export function mapSessionToRow(session, mentorMap, learnerMap, roleLabel) {
   const backendMentorName = String(session.mentorName || '').trim();
+  const learnerName = session.learnerName || learnerMap.get(String(session.learnerId))?.name || `Learner #${session.learnerId}`;
+  const hasReliableBackendMentorName =
+    backendMentorName &&
+    !backendMentorName.startsWith('Mentor #') &&
+    backendMentorName !== learnerName;
   const mentorName =
-    backendMentorName && !backendMentorName.startsWith('Mentor #')
+    hasReliableBackendMentorName
       ? backendMentorName
       : mentorMap.get(String(session.mentorId))?.name || 'Mentor';
-  const learnerName = session.learnerName || learnerMap.get(String(session.learnerId))?.name || `Learner #${session.learnerId}`;
 
   return {
     id: session.id,

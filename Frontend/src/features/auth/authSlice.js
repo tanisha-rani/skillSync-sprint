@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const roleLabels = {
-  ROLE_ADMIN: 'Admin',
   ROLE_MENTOR: 'Mentor',
   ROLE_LEARNER: 'Learner',
 };
 
 const roleHeadlines = {
-  ROLE_ADMIN: 'Keeping mentor quality, session reliability, and community health strong.',
   ROLE_MENTOR: 'Helping learners turn concepts into projects and interview wins.',
   ROLE_LEARNER: 'Building full-stack confidence with structured mentor support.',
 };
+
+const allowedRoles = ['ROLE_LEARNER', 'ROLE_MENTOR'];
 
 const getInitials = (name = '') =>
   name
@@ -25,6 +25,16 @@ const getStoredUser = () => {
   const role = localStorage.getItem('role');
 
   if (!accessToken || !role) {
+    return null;
+  }
+
+  if (!allowedRoles.includes(role)) {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('role');
     return null;
   }
 
@@ -53,6 +63,17 @@ const authSlice = createSlice({
   reducers: {
     setCredentials: (state, action) => {
       const { userId, name, email, role, accessToken, refreshToken } = action.payload;
+
+      if (!allowedRoles.includes(role)) {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem('role');
+        state.user = null;
+        return;
+      }
 
       localStorage.setItem('accessToken', accessToken);
       localStorage.setItem('refreshToken', refreshToken);

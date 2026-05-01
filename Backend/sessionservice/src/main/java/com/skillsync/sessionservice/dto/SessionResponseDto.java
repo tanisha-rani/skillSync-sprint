@@ -23,6 +23,7 @@ public class SessionResponseDto {
     private SessionStatus status;
     private String mentorName;
     private String learnerName;
+    private String learnerEmail;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

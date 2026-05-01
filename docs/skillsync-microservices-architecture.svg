@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">SkillSync Microservices Architecture</title>
+  <desc id="desc">Architecture diagram showing React client, API Gateway, Eureka, Config Server, Spring Boot microservices, MySQL databases, RabbitMQ notifications, Feign communication, and Zipkin tracing.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #94a3b8; stroke-width: 3; }
+      .title { font: 800 42px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 22px Arial, sans-serif; fill: #111827; }
+      .small { font: 18px Arial, sans-serif; fill: #334155; }
+      .tiny { font: 15px Arial, sans-serif; fill: #475569; }
+      .service { fill: #fff7ed; stroke: #f59e0b; stroke-width: 2.5; }
+      .infra { fill: #eef2ff; stroke: #6366f1; stroke-width: 2.5; }
+      .gateway { fill: #fce7f3; stroke: #db2777; stroke-width: 2.8; }
+      .client { fill: #ecfeff; stroke: #0891b2; stroke-width: 2.8; }
+      .db { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .queue { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.5; }
+      .arrow { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .soft { stroke: #64748b; stroke-width: 2.2; fill: none; marker-end: url(#arrow); stroke-dasharray: 8 8; }
+      .feign { stroke: #059669; stroke-width: 2.6; fill: none; marker-end: url(#arrowGreen); stroke-dasharray: 11 8; }
+      .rabbit { stroke: #16a34a; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .trace { stroke: #7c3aed; stroke-width: 2; fill: none; marker-end: url(#arrowPurple); stroke-dasharray: 5 7; opacity: .55; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#059669"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1120"/>
+  <text class="title" x="70" y="80">SkillSync Microservices Architecture</text>
+  <text class="small" x="72" y="116">Peer learning and mentor matching platform</text>
+
+  <rect class="client" x="705" y="45" width="390" height="95" rx="18"/>
+  <text class="label" x="815" y="85">Web Client</text>
+  <text class="small" x="785" y="116">React + Vite frontend</text>
+
+  <rect class="gateway" x="700" y="185" width="400" height="115" rx="18"/>
+  <text class="label" x="810" y="230">API Gateway</text>
+  <text class="small" x="750" y="262">Spring Cloud Gateway - port 8080</text>
+  <text class="tiny" x="765" y="286">JWT authentication and route filters</text>
+  <path class="arrow" d="M900 140 L900 180"/>
+  <text class="tiny" x="920" y="168">/api REST + Bearer JWT</text>
+
+  <rect class="panel" x="55" y="335" width="1690" height="585" rx="25"/>
+  <text class="label" x="95" y="380">Backend Services</text>
+
+  <rect class="infra" x="90" y="410" width="245" height="95" rx="14"/>
+  <text class="label" x="135" y="447">Config Server</text>
+  <text class="small" x="155" y="478">port 8888</text>
+  <text class="tiny" x="135" y="498">Backend/config-repo</text>
+
+  <rect class="infra" x="365" y="410" width="245" height="95" rx="14"/>
+  <text class="label" x="415" y="447">Eureka</text>
+  <text class="small" x="400" y="478">Discovery Server</text>
+  <text class="tiny" x="445" y="498">port 8761</text>
+
+  <rect class="queue" x="1190" y="410" width="250" height="95" rx="14"/>
+  <text class="label" x="1260" y="447">RabbitMQ</text>
+  <text class="small" x="1235" y="478">5672 / 15672</text>
+  <text class="tiny" x="1215" y="498">notificationQueue</text>
+
+  <rect class="infra" x="1470" y="410" width="230" height="95" rx="14"/>
+  <text class="label" x="1542" y="447">Zipkin</text>
+  <text class="small" x="1515" y="478">Tracing - 9411</text>
+
+  <g id="services">
+    <rect class="service" x="120" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="158" y="608">Auth</text>
+    <text class="small" x="151" y="638">Service 8087</text>
+
+    <rect class="service" x="325" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="370" y="608">User</text>
+    <text class="small" x="356" y="638">Service 8081</text>
+
+    <rect class="service" x="530" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="575" y="608">Mentor</text>
+    <text class="small" x="561" y="638">Service 8082</text>
+
+    <rect class="service" x="735" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="780" y="608">Skill</text>
+    <text class="small" x="766" y="638">Service 8083</text>
+
+    <rect class="service" x="940" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="985" y="608">Session</text>
+    <text class="small" x="971" y="638">Service 8084</text>
+
+    <rect class="service" x="1145" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="1192" y="608">Group</text>
+    <text class="small" x="1176" y="638">Service 8085</text>
+
+    <rect class="service" x="1350" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="1392" y="608">Review</text>
+    <text class="small" x="1381" y="638">Service 8086</text>
+
+    <rect class="service" x="1555" y="570" width="180" height="98" rx="14"/>
+    <text class="label" x="1575" y="608">Notification</text>
+    <text class="small" x="1586" y="638">Service 8089</text>
+  </g>
+
+  <path class="arrow" d="M900 300 L900 350 L210 350 L210 565"/>
+  <path class="arrow" d="M900 300 L900 350 L415 350 L415 565"/>
+  <path class="arrow" d="M900 300 L900 350 L620 350 L620 565"/>
+  <path class="arrow" d="M900 300 L900 350 L825 350 L825 565"/>
+  <path class="arrow" d="M900 300 L900 565"/>
+  <path class="arrow" d="M900 350 L1235 350 L1235 565"/>
+  <path class="arrow" d="M900 350 L1440 350 L1440 565"/>
+  <path class="arrow" d="M900 350 L1645 350 L1645 565"/>
+  <text class="tiny" x="930" y="335">Gateway routes by path: /auth, /users, /mentors, /skills, /sessions, /groups, /reviews, /notifications</text>
+
+  <path class="soft" d="M700 245 L610 458"/>
+  <path class="soft" d="M300 455 L365 455"/>
+  <path class="soft" d="M610 455 L700 245"/>
+  <text class="tiny" x="365" y="390">Service registration and lookup</text>
+
+  <path class="soft" d="M212 505 L210 565"/>
+  <path class="soft" d="M212 505 L415 565"/>
+  <path class="soft" d="M212 505 L620 565"/>
+  <path class="soft" d="M212 505 L825 565"/>
+  <path class="soft" d="M212 505 L1030 565"/>
+  <path class="soft" d="M212 505 L1235 565"/>
+  <path class="soft" d="M212 505 L1440 565"/>
+  <path class="soft" d="M212 505 L1645 565"/>
+  <text class="tiny" x="95" y="530">Central YAML config</text>
+
+  <path class="feign" d="M300 605 L325 605"/>
+  <path class="feign" d="M300 632 C760 710 1210 710 1555 632"/>
+  <path class="feign" d="M620 570 C560 520 475 520 415 570"/>
+  <path class="feign" d="M710 620 C1040 520 1325 520 1555 600"/>
+  <path class="feign" d="M940 610 C820 525 680 525 620 570"/>
+  <path class="feign" d="M940 635 C760 735 525 735 415 668"/>
+  <path class="feign" d="M1120 610 C1290 535 1450 535 1555 590"/>
+  <path class="feign" d="M1350 605 C1255 525 1130 525 1030 570"/>
+  <path class="feign" d="M1350 635 C1140 745 770 745 620 668"/>
+  <path class="feign" d="M1325 628 C1425 700 1505 700 1555 640"/>
+  <path class="feign" d="M1235 570 C1020 500 635 500 415 570"/>
+  <path class="feign" d="M1645 570 C1500 510 1220 510 1030 570"/>
+  <text class="tiny" x="805" y="722" fill="#047857">Dashed green lines: Feign inter-service REST calls</text>
+
+  <path class="rabbit" d="M1555 590 C1485 520 1415 500 1440 455"/>
+  <path class="rabbit" d="M1190 475 C1065 550 1250 715 1555 650"/>
+  <text class="tiny" x="1210" y="530" fill="#166534">notification.exchange / notification.email</text>
+
+  <g id="databases">
+    <path class="db" d="M132 800 C132 780 288 780 288 800 L288 868 C288 888 132 888 132 868 Z"/>
+    <ellipse class="db" cx="210" cy="800" rx="78" ry="20"/>
+    <text class="small" x="173" y="842">auth_db</text>
+
+    <path class="db" d="M337 800 C337 780 493 780 493 800 L493 868 C493 888 337 888 337 868 Z"/>
+    <ellipse class="db" cx="415" cy="800" rx="78" ry="20"/>
+    <text class="small" x="373" y="842">users_db</text>
+
+    <path class="db" d="M542 800 C542 780 698 780 698 800 L698 868 C698 888 542 888 542 868 Z"/>
+    <ellipse class="db" cx="620" cy="800" rx="78" ry="20"/>
+    <text class="small" x="573" y="842">mentor_db</text>
+
+    <path class="db" d="M747 800 C747 780 903 780 903 800 L903 868 C903 888 747 888 747 868 Z"/>
+    <ellipse class="db" cx="825" cy="800" rx="78" ry="20"/>
+    <text class="small" x="785" y="842">skill_db</text>
+
+    <path class="db" d="M952 800 C952 780 1108 780 1108 800 L1108 868 C1108 888 952 888 952 868 Z"/>
+    <ellipse class="db" cx="1030" cy="800" rx="78" ry="20"/>
+    <text class="small" x="978" y="842">session_db</text>
+
+    <path class="db" d="M1157 800 C1157 780 1313 780 1313 800 L1313 868 C1313 888 1157 888 1157 868 Z"/>
+    <ellipse class="db" cx="1235" cy="800" rx="78" ry="20"/>
+    <text class="small" x="1191" y="842">group_db</text>
+
+    <path class="db" d="M1362 800 C1362 780 1518 780 1518 800 L1518 868 C1518 888 1362 888 1362 868 Z"/>
+    <ellipse class="db" cx="1440" cy="800" rx="78" ry="20"/>
+    <text class="small" x="1394" y="842">review_db</text>
+
+    <path class="db" d="M1567 800 C1567 780 1723 780 1723 800 L1723 868 C1723 888 1567 888 1567 868 Z"/>
+    <ellipse class="db" cx="1645" cy="800" rx="78" ry="20"/>
+    <text class="small" x="1580" y="842">notifications_db</text>
+  </g>
+
+  <path class="arrow" d="M210 668 L210 775"/>
+  <path class="arrow" d="M415 668 L415 775"/>
+  <path class="arrow" d="M620 668 L620 775"/>
+  <path class="arrow" d="M825 668 L825 775"/>
+  <path class="arrow" d="M1030 668 L1030 775"/>
+  <path class="arrow" d="M1235 668 L1235 775"/>
+  <path class="arrow" d="M1440 668 L1440 775"/>
+  <path class="arrow" d="M1645 668 L1645 775"/>
+  <text class="label" x="812" y="950">MySQL databases on skillsync-mysql, host port 3307</text>
+
+  <path class="trace" d="M1645 668 L1585 505"/>
+  <path class="trace" d="M1440 668 L1585 505"/>
+  <path class="trace" d="M1030 668 L1585 505"/>
+  <path class="trace" d="M825 668 L1585 505"/>
+  <path class="trace" d="M620 668 L1585 505"/>
+  <path class="trace" d="M415 668 L1585 505"/>
+  <path class="trace" d="M210 668 L1585 505"/>
+  <path class="trace" d="M900 300 L1585 410"/>
+  <text class="tiny" x="1490" y="535" fill="#6d28d9">Micrometer/Zipkin spans</text>
+
+  <rect x="65" y="990" width="1670" height="70" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="small" x="95" y="1032">Security: public /auth routes issue JWTs. Gateway JWT filter protects /users, /mentors, /skills, /groups, /sessions, /reviews, and /notifications routes.</text>
+</svg>

@@ -3,6 +3,8 @@ package com.skillsync.notificationservice.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.skillsync.notificationservice.config.RabbitMQConfig;
 import com.skillsync.notificationservice.dto.NotificationRequestDto;
+import com.skillsync.notificationservice.dto.NotificationResponseDto;
+import com.skillsync.notificationservice.entity.NotificationStatus;
 import com.skillsync.notificationservice.entity.NotificationType;
 import com.skillsync.notificationservice.entity.ReferenceType;
 import com.skillsync.notificationservice.service.JwtService;
@@ -73,5 +75,26 @@ class NotificationControllerTest {
         mockMvc.perform(get("/notifications/user/1/unread-count"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.unreadCount").value(3));
+    }
+
+    @Test
+    void sendNotificationNow_returnsBadGatewayWhenMailFails() throws Exception {
+        NotificationRequestDto request = NotificationRequestDto.builder()
+                .userId(1L)
+                .recipientEmail("user@example.com")
+                .type(NotificationType.WELCOME)
+                .build();
+
+        NotificationResponseDto response = NotificationResponseDto.builder()
+                .status(NotificationStatus.FAILED)
+                .build();
+
+        when(notificationService.sendNotification(any(NotificationRequestDto.class))).thenReturn(response);
+
+        mockMvc.perform(post("/notifications/send-now")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isBadGateway())
+                .andExpect(jsonPath("$.status").value("FAILED"));
     }
 }

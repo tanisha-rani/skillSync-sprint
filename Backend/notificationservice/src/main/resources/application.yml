@@ -22,13 +22,18 @@ spring:
     password: ${SPRING_RABBITMQ_PASSWORD:guest}
   mail:
     host: ${SPRING_MAIL_HOST:sandbox.smtp.mailtrap.io}
-    port: ${SPRING_MAIL_PORT:2525}
+    port: ${SPRING_MAIL_PORT:587}
     username: ${SPRING_MAIL_USERNAME:bd75d4b1fb1194}
     password: ${SPRING_MAIL_PASSWORD:0af8cb94fe484c}
     properties:
       mail:
         smtp:
           auth: true
+          connectiontimeout: 10000
+          timeout: 10000
+          writetimeout: 10000
+          ssl:
+            trust: sandbox.smtp.mailtrap.io
           starttls:
             enable: true
 
@@ -37,4 +42,4 @@ server:
 
 app:
   mail:
-    from: ${APP_MAIL_FROM:no-reply@skillsync.local}
+    from: ${APP_MAIL_FROM:no-reply@skillsync.test}

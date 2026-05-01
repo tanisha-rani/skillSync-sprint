@@ -6,6 +6,7 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
@@ -34,6 +35,7 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
         return (exchange, chain) -> {
 
             String path = exchange.getRequest().getURI().getPath();
+            HttpMethod method = exchange.getRequest().getMethod();
 
             // ✅ Public endpoints
             if (path.contains("/v3/api-docs")
@@ -74,7 +76,9 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
 
                 // 🔒 ROLE-BASED ACCESS
 
-                if (path.contains("/users") && !role.equals("ROLE_ADMIN")) {
+                boolean isUserProfileRead = HttpMethod.GET.equals(method) && path.matches("/users/\\d+");
+
+                if (path.contains("/users") && !role.equals("ROLE_ADMIN") && !isUserProfileRead) {
                     return onError(exchange, "Access Denied - Admin Only", HttpStatus.FORBIDDEN);
                 }
 

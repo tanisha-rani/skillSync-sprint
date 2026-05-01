@@ -6,7 +6,6 @@ import { useRegisterMutation } from '../features/auth/authApi.js';
 const roleOptions = [
   { value: 'ROLE_LEARNER', label: 'Learner' },
   { value: 'ROLE_MENTOR', label: 'Mentor' },
-  { value: 'ROLE_ADMIN', label: 'Admin' },
 ];
 
 function SignupPage() {

@@ -3,9 +3,12 @@ package com.skillsync.notificationservice.controller;
 import com.skillsync.notificationservice.config.RabbitMQConfig;
 import com.skillsync.notificationservice.dto.NotificationRequestDto;
 import com.skillsync.notificationservice.dto.NotificationResponseDto;
+import com.skillsync.notificationservice.entity.NotificationStatus;
 import com.skillsync.notificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,16 +25,35 @@ public class NotificationController {
 
     // ✅ SEND TO RABBITMQ
     @PostMapping
-    public ResponseEntity<String> sendNotification(
+    public ResponseEntity<?> sendNotification(
             @RequestBody NotificationRequestDto requestDto) {
 
-        rabbitTemplate.convertAndSend(
-                RabbitMQConfig.EXCHANGE,
-                RabbitMQConfig.ROUTING_KEY,
-                requestDto
-        );
+        try {
+            rabbitTemplate.convertAndSend(
+                    RabbitMQConfig.EXCHANGE,
+                    RabbitMQConfig.ROUTING_KEY,
+                    requestDto
+            );
+        } catch (AmqpException e) {
+            NotificationResponseDto response = notificationService.sendNotification(requestDto);
+            if (response.getStatus() == NotificationStatus.FAILED) {
+                return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(response);
+            }
+            return ResponseEntity.ok(response);
+        }
 
         return ResponseEntity.ok("Message sent to queue");
+    }
+
+    @PostMapping("/send-now")
+    public ResponseEntity<NotificationResponseDto> sendNotificationNow(
+            @RequestBody NotificationRequestDto requestDto) {
+
+        NotificationResponseDto response = notificationService.sendNotification(requestDto);
+        HttpStatus status = response.getStatus() == NotificationStatus.FAILED
+                ? HttpStatus.BAD_GATEWAY
+                : HttpStatus.OK;
+        return ResponseEntity.status(status).body(response);
     }
 
     // ---------------- NORMAL METHODS ----------------

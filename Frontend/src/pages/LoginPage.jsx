@@ -28,8 +28,13 @@ function LoginPage() {
           password,
         }).unwrap();
 
+      if (response.role === 'ROLE_ADMIN') {
+        setErrorMessage('Admin login is not allowed from this frontend.');
+        return;
+      }
+
       dispatch(setCredentials(response));
-      navigate(response.role === 'ROLE_ADMIN' ? '/admin' : '/dashboard', { replace: true });
+      navigate('/dashboard', { replace: true });
     } catch (error) {
       setErrorMessage(error?.data?.message || error?.data?.error || error?.message || 'Login failed.');
     }

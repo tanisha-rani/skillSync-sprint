@@ -13,6 +13,14 @@ import { buildUserMap, formatCurrency, mapMentorToCard } from '../utils/viewMapp
 
 const durations = [30, 60, 90];
 const slots = ['09:00 AM', '10:30 AM', '11:00 AM', '02:00 PM', '04:30 PM'];
+const getTodayDateInputValue = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+
+  return `${year}-${month}-${day}`;
+};
 
 function BookingPage({ currentUser }) {
   const [searchParams] = useSearchParams();
@@ -27,6 +35,7 @@ function BookingPage({ currentUser }) {
   const [requiredSkill, setRequiredSkill] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const todayDate = getTodayDateInputValue();
 
   const userMap = useMemo(() => buildUserMap(usersResponse?.content || []), [usersResponse]);
   const mentors = useMemo(
@@ -79,6 +88,11 @@ function BookingPage({ currentUser }) {
   const handleSubmit = async () => {
     if (!selectedMentor?.id || !selectedDate || !topic.trim() || !requiredSkill) {
       setErrorMessage('Please choose a mentor, matching skill, date, and topic before booking.');
+      return;
+    }
+
+    if (selectedDate < todayDate) {
+      setErrorMessage('Please choose today or a future date.');
       return;
     }
 
@@ -155,7 +169,12 @@ function BookingPage({ currentUser }) {
 
           <div className="booking-section">
             <h4>📅 Select Date</h4>
-            <input type="date" value={selectedDate} onChange={(event) => setSelectedDate(event.target.value)} />
+            <input
+              type="date"
+              min={todayDate}
+              value={selectedDate}
+              onChange={(event) => setSelectedDate(event.target.value)}
+            />
           </div>
 
           <div className="booking-section">

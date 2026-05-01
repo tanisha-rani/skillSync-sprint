@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import SectionHeading from '../components/SectionHeading.jsx';
@@ -17,6 +17,7 @@ import {
   useGetSessionsByMentorQuery,
   useGetSessionsByUserQuery,
   useGetUsersQuery,
+  useLazyGetUserByIdQuery,
   useMarkNotificationReadMutation,
   useReapplyMentorMutation,
   useUpdateMentorMutation,
@@ -89,8 +90,10 @@ function DashboardPage({ currentUser }) {
   const [reviewForm, setReviewForm] = useState({ rating: 5, comment: '' });
   const [reviewMessage, setReviewMessage] = useState('');
   const [sessionActionError, setSessionActionError] = useState('');
+  const [learnerDetailsById, setLearnerDetailsById] = useState({});
 
   const { data: mentorsResponse } = useGetMentorsQuery();
+  const [fetchUserById] = useLazyGetUserByIdQuery();
   const { data: usersResponse } = useGetUsersQuery(undefined, {
     skip: currentUser.role !== 'ROLE_ADMIN',
   });
@@ -146,6 +149,49 @@ function DashboardPage({ currentUser }) {
     () => sessionsSource.map((session) => mapSessionToRow(session, mentorDisplayMap, userMap, currentUser.roleLabel)),
     [currentUser.roleLabel, mentorDisplayMap, sessionsSource, userMap]
   );
+
+  useEffect(() => {
+    if (!canShowMentorWorkspace || !mentorSessionsResponse?.length) {
+      return;
+    }
+
+    const learnerIds = Array.from(new Set(mentorSessionsResponse.map((session) => session.learnerId).filter(Boolean)));
+    const missingLearnerIds = learnerIds.filter((id) => !userMap.has(String(id)) && !learnerDetailsById[String(id)]);
+
+    if (!missingLearnerIds.length) {
+      return;
+    }
+
+    let isActive = true;
+
+    Promise.all(
+      missingLearnerIds.map((id) =>
+        fetchUserById(id)
+          .unwrap()
+          .then((learner) => learner)
+          .catch(() => null)
+      )
+    ).then((learners) => {
+      if (!isActive) {
+        return;
+      }
+
+      const nextLearners = learners.filter(Boolean);
+
+      if (!nextLearners.length) {
+        return;
+      }
+
+      setLearnerDetailsById((current) => ({
+        ...current,
+        ...Object.fromEntries(nextLearners.map((learner) => [String(learner.id), learner])),
+      }));
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, [canShowMentorWorkspace, fetchUserById, learnerDetailsById, mentorSessionsResponse, userMap]);
 
   const myGroups = myGroupsResponse?.content || [];
   const notifications = useMemo(() => normalizeNotifications(notificationsResponse), [notificationsResponse]);
@@ -216,13 +262,33 @@ function DashboardPage({ currentUser }) {
       : 'Mentor profiles will appear here once mentor data is available.',
   ];
 
-  const mentorLearnerList = Array.from(new Set((mentorSessionsResponse || []).map((session) => session.learnerId)))
-    .map((id) => userMap.get(String(id)) || {
-      id,
-      name: `Learner #${id}`,
-      email: 'Learner details are restricted',
-      role: 'ROLE_LEARNER',
-    });
+  const mentorLearnerList = Array.from(
+    new Map((mentorSessionsResponse || []).map((session) => {
+      const id = session.learnerId;
+      const learner = userMap.get(String(id)) || learnerDetailsById[String(id)];
+      const learnerName =
+        learner?.name ||
+        session.learnerName ||
+        session.learner?.name ||
+        session.learnerUser?.name ||
+        session.userName;
+      const learnerEmail =
+        learner?.email ||
+        session.learnerEmail ||
+        session.learner?.email ||
+        session.learnerUser?.email;
+
+      return [
+        String(id),
+        {
+          id,
+          name: learnerName || `Learner #${id}`,
+          email: learnerEmail || 'Connected through your sessions',
+          role: learner?.roleLabel || 'Learner',
+        },
+      ];
+    })).values()
+  );
   const mentorLearners = mentorLearnerList.slice(0, 5);
   const completedSessionRows = sessionRows.filter((session) => session.status === 'COMPLETED');
   const reviewedSessionIds = useMemo(
@@ -684,7 +750,7 @@ function DashboardPage({ currentUser }) {
     <div className="page-stack">
       <section className="hero-strip">
         <div>
-          <p className="eyebrow">Good morning, {currentUser.name.split(' ')[0]}</p>
+          {/* <p className="eyebrow">Good morning, {currentUser.name.split(' ')[0]}</p> */}
           <h2>{currentUser.headline}</h2>
         </div>
         <button

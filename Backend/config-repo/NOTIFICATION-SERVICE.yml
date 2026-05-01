@@ -21,15 +21,24 @@ spring:
     password: guest
   mail:
     host: sandbox.smtp.mailtrap.io
-    port: 2525
+    port: 587
     username: bd75d4b1fb1194
     password: 0af8cb94fe484c
     properties:
       mail:
         smtp:
           auth: true
+          connectiontimeout: 10000
+          timeout: 10000
+          writetimeout: 10000
+          ssl:
+            trust: sandbox.smtp.mailtrap.io
           starttls:
             enable: true
+
+app:
+  mail:
+    from: no-reply@skillsync.test
 
 springdoc:
   api-docs:
