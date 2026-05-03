@@ -10,6 +10,8 @@ import DashboardPage from './pages/DashboardPage.jsx';
 import MentorsPage from './pages/MentorsPage.jsx';
 import BookingPage from './pages/BookingPage.jsx';
 import GroupsPage from './pages/GroupsPage.jsx';
+import AdminPage from './pages/AdminPage.jsx';
+import AdminSkillsPage from './pages/AdminSkillsPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import SignupPage from './pages/SignupPage.jsx';
 
@@ -18,6 +20,8 @@ const pageTitles = {
   mentors: '👨‍🏫 Find Mentors',
   booking: '📅 Book Session',
   groups: '👥 Learning Groups',
+  admin: '🛡️ Admin Console',
+  'skills-admin': '⭐ Skills',
 };
 
 const getActiveRoute = (pathname) => {
@@ -49,11 +53,10 @@ function App() {
       return;
     }
 
-    if (role === 'ROLE_ADMIN') {
-      dispatch(clearCredentials());
-      navigate('/login', { replace: true });
+    if (role === 'ROLE_ADMIN' && location.pathname === '/dashboard') {
+      navigate('/admin', { replace: true });
     }
-  }, [dispatch, isAuthenticated, location.pathname, navigate, role]);
+  }, [isAuthenticated, location.pathname, navigate, role]);
 
   const routeContent = useMemo(() => {
     if (!isAuthenticated) {
@@ -71,10 +74,14 @@ function App() {
         return <BookingPage {...sharedProps} />;
       case 'groups':
         return <GroupsPage {...sharedProps} />;
+      case 'admin':
+        return role === 'ROLE_ADMIN' ? <AdminPage {...sharedProps} /> : <DashboardPage {...sharedProps} />;
+      case 'skills-admin':
+        return role === 'ROLE_ADMIN' ? <AdminSkillsPage {...sharedProps} /> : <DashboardPage {...sharedProps} />;
       default:
         return <DashboardPage {...sharedProps} />;
     }
-  }, [activeRoute, currentUser, isAuthenticated]);
+  }, [activeRoute, currentUser, isAuthenticated, role]);
 
   const handleLogout = () => {
     dispatch(clearCredentials());
@@ -99,20 +106,22 @@ function App() {
     <Routes>
       <Route
         path="/login"
-        element={isAuthenticated ? <Navigate replace to="/dashboard" /> : <LoginPage />}
+        element={isAuthenticated ? <Navigate replace to={role === 'ROLE_ADMIN' ? '/admin' : '/dashboard'} /> : <LoginPage />}
       />
       <Route
         path="/signup"
-        element={isAuthenticated ? <Navigate replace to="/dashboard" /> : <SignupPage />}
+        element={isAuthenticated ? <Navigate replace to={role === 'ROLE_ADMIN' ? '/admin' : '/dashboard'} /> : <SignupPage />}
       />
       <Route element={<ProtectedRoute />}>
-        <Route path="/" element={<Navigate replace to="/dashboard" />} />
+        <Route path="/" element={<Navigate replace to={role === 'ROLE_ADMIN' ? '/admin' : '/dashboard'} />} />
         <Route path="/dashboard" element={shell} />
         <Route path="/mentors" element={shell} />
         <Route path="/booking" element={shell} />
         <Route path="/groups" element={shell} />
+        <Route path="/admin" element={shell} />
+        <Route path="/skills-admin" element={shell} />
       </Route>
-      <Route path="*" element={<Navigate replace to={isAuthenticated ? '/dashboard' : '/login'} />} />
+      <Route path="*" element={<Navigate replace to={isAuthenticated ? (role === 'ROLE_ADMIN' ? '/admin' : '/dashboard') : '/login'} />} />
     </Routes>
   );
 }

@@ -3,6 +3,8 @@ package com.skillsync.mentor.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.skillsync.mentor.dto.MentorRequestDto;
 import com.skillsync.mentor.dto.MentorResponseDto;
+import com.skillsync.mentor.repository.MentorRepository;
+import com.skillsync.mentor.service.JwtService;
 import com.skillsync.mentor.service.MentorService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,12 @@ class MentorControllerTest {
 
     @MockBean
     private MentorService mentorService;
+
+    @MockBean
+    private MentorRepository mentorRepository;
+
+    @MockBean
+    private JwtService jwtService;
 
     @Test
     void applyAsMentor_returnsCreated() throws Exception {

@@ -3,6 +3,7 @@ package com.skillsync.group.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.skillsync.group.dto.GroupRequestDto;
 import com.skillsync.group.dto.GroupResponseDto;
+import com.skillsync.group.service.JwtService;
 import com.skillsync.group.service.GroupService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,9 @@ class GroupControllerTest {
 
     @MockBean
     private GroupService groupService;
+
+    @MockBean
+    private JwtService jwtService;
 
     @Test
     void createGroup_returnsCreated() throws Exception {

@@ -1,16 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const roleLabels = {
+  ROLE_ADMIN: 'Admin',
   ROLE_MENTOR: 'Mentor',
   ROLE_LEARNER: 'Learner',
 };
 
 const roleHeadlines = {
+  ROLE_ADMIN: 'Keeping mentor quality, session reliability, and community health strong.',
   ROLE_MENTOR: 'Helping learners turn concepts into projects and interview wins.',
   ROLE_LEARNER: 'Building full-stack confidence with structured mentor support.',
 };
 
-const allowedRoles = ['ROLE_LEARNER', 'ROLE_MENTOR'];
+const allowedRoles = ['ROLE_LEARNER', 'ROLE_MENTOR', 'ROLE_ADMIN'];
 
 const getInitials = (name = '') =>
   name

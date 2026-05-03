@@ -1,5 +1,6 @@
 package com.skillsync.mentor.service.impl;
 
+import com.skillsync.mentor.client.NotificationFeignClient;
 import com.skillsync.mentor.dto.MentorRequestDto;
 import com.skillsync.mentor.entity.Mentor;
 import com.skillsync.mentor.entity.MentorStatus;
@@ -28,6 +29,9 @@ class MentorServiceImplTest {
 
     @Mock
     private ModelMapper modelMapper;
+
+    @Mock
+    private NotificationFeignClient notificationFeignClient;
 
     @InjectMocks
     private MentorServiceImpl mentorService;

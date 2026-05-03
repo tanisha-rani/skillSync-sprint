@@ -5,26 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1766066a-96b5-40d7-a9ec-63524ef85638" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/frontend-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/frontend-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/skillsync/apigateway/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/skillsync/apigateway/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config-repo/NOTIFICATION-SERVICE.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config-repo/NOTIFICATION-SERVICE.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/controller/NotificationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/controller/NotificationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/dto/SessionResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/dto/SessionResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/main/java/com/skillsync/sessionservice/service/impl/SessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/test/java/com/skillsync/apigateway/ApigatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/test/java/com/skillsync/apigateway/ApigatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/AuthServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/AuthServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/controller/RoleControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/controller/RoleControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/controller/TestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/controller/TestControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/authservice/src/test/java/com/skillsync/authservice/service/impl/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/groupservice/src/test/java/com/skillsync/group/GroupApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/groupservice/src/test/java/com/skillsync/group/GroupApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/groupservice/src/test/java/com/skillsync/group/controller/GroupControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/groupservice/src/test/java/com/skillsync/group/controller/GroupControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/MentorApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/MentorApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/controller/MentorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/controller/MentorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/service/impl/MentorServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mentor/src/test/java/com/skillsync/mentor/service/impl/MentorServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/main/java/com/skillsync/notificationservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/NotificationserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/notificationservice/src/test/java/com/skillsync/notificationservice/NotificationserviceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/src/test/java/com/skillsync/reviewservice/controller/ReviewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/src/test/java/com/skillsync/reviewservice/controller/ReviewControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/review-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/review-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/review-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/review-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/sonar/report-task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/test-classes/com/skillsync/reviewservice/controller/ReviewControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/test-classes/com/skillsync/reviewservice/controller/ReviewControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/review-service/target/test-classes/com/skillsync/reviewservice/service/impl/ReviewServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/review-service/target/test-classes/com/skillsync/reviewservice/service/impl/ReviewServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/test/java/com/skillsync/sessionservice/SessionserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/test/java/com/skillsync/sessionservice/SessionserviceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/sessionservice/src/test/java/com/skillsync/sessionservice/controller/SessionControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/sessionservice/src/test/java/com/skillsync/sessionservice/controller/SessionControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/skillService/src/test/java/com/skillsync/skillService/SkillServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/skillService/src/test/java/com/skillsync/skillService/SkillServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/skillService/src/test/java/com/skillsync/skillService/controller/SkillControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/skillService/src/test/java/com/skillsync/skillService/controller/SkillControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/userservice/src/test/java/com/skillsync/userservice/UserserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/userservice/src/test/java/com/skillsync/userservice/UserserviceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/userservice/src/test/java/com/skillsync/userservice/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/userservice/src/test/java/com/skillsync/userservice/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/authSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/features/platform/platformApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/platform/platformApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/layout/Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/layout/Topbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/BookingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/BookingPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/DashboardPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/LoginPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/SignupPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/SignupPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/utils/viewMappers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/utils/viewMappers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +58,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="5512" />
+    <option name="cachedIndexableFilesCount" value="8697" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,6 +97,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JUnit.AuthServiceApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MentorApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MentorControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoleControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -93,7 +121,7 @@
     &quot;Spring Boot.SessionserviceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SkillServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UserserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;original/dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
@@ -110,6 +138,66 @@
       <toRun name="SkillServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="UserserviceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
+    </configuration>
+    <configuration name="AuthServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.skillsync.authservice" />
+      <option name="MAIN_CLASS_NAME" value="com.skillsync.authservice.AuthServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MentorApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mentor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.mentor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.skillsync.mentor" />
+      <option name="MAIN_CLASS_NAME" value="com.skillsync.mentor.MentorApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MentorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mentor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.mentor.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.skillsync.mentor.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.skillsync.mentor.controller.MentorControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="review-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.skillsync.reviewservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.skillsync.reviewservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.skillsync.reviewservice.controller.ReviewControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ApigatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
@@ -281,6 +369,10 @@
     </configuration>
     <list>
       <item itemvalue="Compound.All Services" />
+      <item itemvalue="JUnit.AuthServiceApplicationTests" />
+      <item itemvalue="JUnit.MentorApplicationTests" />
+      <item itemvalue="JUnit.MentorControllerTest" />
+      <item itemvalue="JUnit.ReviewControllerTest" />
       <item itemvalue="Spring Boot.ApigatewayApplication" />
       <item itemvalue="Spring Boot.ConfigserverApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
@@ -297,6 +389,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="JUnit.ReviewControllerTest" />
+        <item itemvalue="JUnit.MentorControllerTest" />
+        <item itemvalue="JUnit.MentorApplicationTests" />
+        <item itemvalue="JUnit.AuthServiceApplicationTests" />
       </list>
     </recent_temporary>
   </component>

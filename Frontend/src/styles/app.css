@@ -37,7 +37,7 @@
 }
 
 .sidebar-copy, .hero-subtitle, .muted-text, .section-heading p, .helper-note, .group-topline p, .mentor-card p, .stat-card span, .field span { 
-    color: lightgray(--muted); 
+    color: var(--muted); 
 }
 .sidebar-nav { 
     display: grid; gap: 0.5rem; 

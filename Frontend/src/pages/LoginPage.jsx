@@ -24,17 +24,12 @@ function LoginPage() {
       setErrorMessage('');
 
       const response = await login({
-          email: email.trim(),
-          password,
-        }).unwrap();
-
-      if (response.role === 'ROLE_ADMIN') {
-        setErrorMessage('Admin login is not allowed from this frontend.');
-        return;
-      }
+        email: email.trim(),
+        password,
+      }).unwrap();
 
       dispatch(setCredentials(response));
-      navigate('/dashboard', { replace: true });
+      navigate(response.role === 'ROLE_ADMIN' ? '/admin' : '/dashboard', { replace: true });
     } catch (error) {
       setErrorMessage(error?.data?.message || error?.data?.error || error?.message || 'Login failed.');
     }

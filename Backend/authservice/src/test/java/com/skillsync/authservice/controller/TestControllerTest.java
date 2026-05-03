@@ -2,6 +2,7 @@ package com.skillsync.authservice.controller;
 
 import com.skillsync.authservice.entity.Role;
 import com.skillsync.authservice.entity.User;
+import com.skillsync.authservice.service.JwtService;
 import com.skillsync.authservice.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,9 @@ class TestControllerTest {
 
     @MockBean
     private UserService userService;
+
+    @MockBean
+    private JwtService jwtService;
 
     @Test
     void test_returnsAuthenticatedMessage() throws Exception {

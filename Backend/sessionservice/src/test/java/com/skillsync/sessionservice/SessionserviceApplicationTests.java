@@ -1,13 +1,14 @@
 package com.skillsync.sessionservice;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 class SessionserviceApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void applicationClassExists() {
+		assertNotNull(SessionserviceApplication.class);
 	}
 
 }

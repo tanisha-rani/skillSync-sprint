@@ -145,9 +145,13 @@ function DashboardPage({ currentUser }) {
     () => (canShowMentorWorkspace ? mentorSessionsResponse || [] : learnerSessionsResponse || []),
     [canShowMentorWorkspace, learnerSessionsResponse, mentorSessionsResponse]
   );
+  const learnerDisplayMap = useMemo(
+    () => new Map([...userMap, ...Object.entries(learnerDetailsById)]),
+    [learnerDetailsById, userMap]
+  );
   const sessionRows = useMemo(
-    () => sessionsSource.map((session) => mapSessionToRow(session, mentorDisplayMap, userMap, currentUser.roleLabel)),
-    [currentUser.roleLabel, mentorDisplayMap, sessionsSource, userMap]
+    () => sessionsSource.map((session) => mapSessionToRow(session, mentorDisplayMap, learnerDisplayMap, currentUser.roleLabel)),
+    [currentUser.roleLabel, learnerDisplayMap, mentorDisplayMap, sessionsSource]
   );
 
   useEffect(() => {

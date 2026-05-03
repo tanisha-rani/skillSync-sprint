@@ -37,6 +37,11 @@ function SignupPage() {
       setErrorMessage('');
       setMessage('');
 
+      if (formData.role === 'ROLE_ADMIN') {
+        setErrorMessage('Admin accounts cannot be created from this frontend.');
+        return;
+      }
+
       await register({
         name: formData.name.trim(),
         email: formData.email.trim(),

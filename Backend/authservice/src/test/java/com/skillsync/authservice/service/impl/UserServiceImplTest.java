@@ -1,5 +1,7 @@
 package com.skillsync.authservice.service.impl;
 
+import com.skillsync.authservice.client.NotificationServiceClient;
+import com.skillsync.authservice.client.UserServiceClient;
 import com.skillsync.authservice.dto.AuthResponse;
 import com.skillsync.authservice.dto.LoginRequest;
 import com.skillsync.authservice.dto.UserRequest;
@@ -46,6 +48,12 @@ class UserServiceImplTest {
 
     @Mock
     private RefreshTokenServiceImpl refreshTokenServiceImpl;
+
+    @Mock
+    private UserServiceClient userServiceClient;
+
+    @Mock
+    private NotificationServiceClient notificationServiceClient;
 
     @InjectMocks
     private UserServiceImpl userService;

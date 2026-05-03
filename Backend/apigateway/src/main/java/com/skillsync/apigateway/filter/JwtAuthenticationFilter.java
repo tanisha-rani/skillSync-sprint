@@ -42,6 +42,8 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
                     || path.contains("/swagger-ui")
                     || path.contains("/swagger-resources")
                     || path.contains("/webjars")
+                    || (HttpMethod.POST.equals(method)
+                            && (path.equals("/notifications") || path.equals("/notifications/send-now")))
                     || path.contains("/auth/")) {
                 return chain.filter(exchange);
             }
